@@ -26,3 +26,14 @@ We can check if our AWS credentiual is configured correctly by running the follo
 ```sh
 aws sts get-caller-identity
 ```
+
+If it is successfuly you should see a jayson payload return
+looks like this:
+
+```json
+{
+    "UserId": "AIZAXV2ZZJ4LNPELJRBLF",
+    "Account": "012345678901",
+    "Arn": "arn:aws:iam::012345678901:user/terraform-admin"
+}
+```
