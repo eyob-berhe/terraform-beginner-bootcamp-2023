@@ -20,4 +20,8 @@ sudo apt update
 
 sudo apt-get install terraform -y
 
+echo "terraform installed on"  $(date '+%Y-%m-%d')
+echo "The current terraform version is ..."
+terraform -v
+
 cd $PROJECT_ROOT
