@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Terraform Beginner Bootcamp 2023 - week 1
 
 ##Root Module Structure
@@ -60,4 +59,4 @@ Keep in mind that auto.tfvars should be placed in the same directory as your Ter
 ### order of terraform variables
 =======
 # Terraform Beginner Bootcamp 2023 - week 1
->>>>>>> main
+
