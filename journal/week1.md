@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Terraform Beginner Bootcamp 2023 - week 1
 
 ##Root Module Structure
@@ -57,3 +58,6 @@ This mechanism allows you to provide default values for variables in a way that'
 Keep in mind that auto.tfvars should be placed in the same directory as your Terraform configuration files for Terraform to automatically recognize and use it.
 
 ### order of terraform variables
+=======
+# Terraform Beginner Bootcamp 2023 - week 1
+>>>>>>> main
