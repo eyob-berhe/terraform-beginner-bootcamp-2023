@@ -56,7 +56,23 @@ This mechanism allows you to provide default values for variables in a way that'
 
 Keep in mind that auto.tfvars should be placed in the same directory as your Terraform configuration files for Terraform to automatically recognize and use it.
 
-### order of terraform variables
-=======
-# Terraform Beginner Bootcamp 2023 - week 1
+## Dealing With Configuration Drift
+
+## What happen if we lose our state fie
+If you have lost your Terraform state file, your best course of action is to try to restore it from a backup or, if you were using a remote backend, retrieve the state from there. If the state is lost, and you have no backups or remote storage, you may need to recreate the infrastructure using your Terraform configuration, which can be a time-consuming and error-prone process.
+
+
+### Fix Missing resource with Terraform import
+
+`terraform import aws_s3_bucket.bucket bucket-name`
+
+### Fix Manual COnfiguration
+
+If someone goes and delete or modifies cloud resource manually through Click-Ops.
+
+If we run Terraform plan is with attempt to put our infrstraucture back into the expected state fixing Configuration Drift
+
+## Fix using Terraform Refresh
+```terraform apply -refresh-only -auto-approve```
+
 

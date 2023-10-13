@@ -1,11 +1,11 @@
 terraform {
-  cloud {
-    organization = "eyob-terraform"
+  # cloud {
+  #   organization = "eyob-terraform"
 
-    workspaces {
-      name = "terra-house-1"
-    }
-  }
+  #   workspaces {
+  #     name = "terra-house-1"
+  #   }
+  # }
   required_providers {
      random = {
       source = "hashicorp/random"
@@ -19,7 +19,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+
 }
 
 provider "random" {
