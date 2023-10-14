@@ -75,4 +75,27 @@ If we run Terraform plan is with attempt to put our infrstraucture back into the
 ## Fix using Terraform Refresh
 ```terraform apply -refresh-only -auto-approve```
 
+## Terraform Moduling
+
+### Terraform Module Structure 
+We can pass input variables to our module. The module has to declare the terraform variables in its own variables.tf
+```
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```
+
+### Module Sources
+Using the source we can import the module from various places eg:
+- locally
+- Github
+- Terraform Registry
+
+```
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+}
+```
 
