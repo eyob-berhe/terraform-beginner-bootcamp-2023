@@ -99,3 +99,37 @@ module "terrahouse_aws" {
 }
 ```
 
+
+## Terraform Local
+ou can define local values within your Terraform configuration using the locals block. Local values are expressions that can be reused throughout your configuration to avoid duplicating complex calculations or strings.
+
+Example:
+```
+locals {
+  environment = "dev"
+  app_name    = "my-app-${local.environment}"
+}
+```
+[Local Valies](https://developer.hashicorp.com/terraform/language/values/locals)
+
+## Terraform Data Sources
+A Terraform data source is a configuration element that allows you to fetch and reference information from external sources, such as cloud providers, databases, APIs, or other systems, and make that data available for use within your Terraform configuration. Data sources are a way to query existing resources and retrieve their attributes without actually creating or modifying those resources.
+
+Example:
+```
+data "aws_caller_identity" "current" {}
+
+output "account_id" {
+  value = data.aws_caller_identity.current.account_id
+}
+```
+[Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)
+
+## Working with JSON
+
+We use the jsoncode to create the json policy inline in the hcl.
+```
+> jsonencode({"hello"="world"})
+{"hello":"world"}
+```
+[jsoncode](https://developer.hashicorp.com/terraform/language/functions/jsonencode)
