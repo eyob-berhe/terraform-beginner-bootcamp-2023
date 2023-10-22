@@ -137,3 +137,14 @@ We use the jsoncode to create the json policy inline in the hcl.
 ## Change the lifecycle of resources
 
 [Meta arguments lifecycle](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle)
+
+
+## Provisioners
+Terraform provioner are used to excecuted scripts or shell commands on local or remote mechine as part of resource creation/delition. 
+They are similat to "EC2 instance user date" scripts that only run once on the creation and if it fails terraform marks it tainted 
+[Provisioners](https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax)
+
+### Local-exec
+Executes a command locally on the machine running Terraform.
+### Remote-exec
+Executes a command on a remote resource, typically after it has been created.
