@@ -148,3 +148,12 @@ They are similat to "EC2 instance user date" scripts that only run once on the c
 Executes a command locally on the machine running Terraform.
 ### Remote-exec
 Executes a command on a remote resource, typically after it has been created.
+
+
+## FOr Each expression terraform
+
+For each allows us to enumertate over complex data types
+```[for s in var.list : upper(s)]
+```
+This is mostly useful when you are creating multiples of a cloud resource and you want to reduce the amount if repetitive terraform code.
+[For Each Expression](https://developer.hashicorp.com/terraform/language/expressions/for)
